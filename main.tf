@@ -1,5 +1,5 @@
 module "network" {
-  source = "https://github.com/manishaguda/tf-module-vpc"
+  source = "github.com/manishaguda/tf-module-vpc"
   env = var.env
 
   for_each = var.vpc
