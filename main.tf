@@ -5,6 +5,6 @@ module "network" {
 
   for_each       = var.vpc
   cidr_block     = each.value.cidr_block
-  public_subnets_cidr = each.value.subnets_cidr
-  private_subnets_cidr = each.value.subnets_cidr
+  public_subnets_cidr = each.value.public_subnets_cidr
+  private_subnets_cidr = each.value.private_subnets_cidr
 }
