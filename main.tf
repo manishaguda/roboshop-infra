@@ -1,6 +1,6 @@
 module "network" {
   source = "github.com/manishaguda/tf-module-vpc"
-  env           var.env
+  env            = var.env
   default_vpc_id = var.default_vpc_id
 
   for_each       = var.vpc
