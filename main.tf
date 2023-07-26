@@ -8,7 +8,7 @@ module "vpc" {
 #  subnets             = each.value.subnets
   public_subnets       = each.value.public_subnets
   private_subnets      = each.value.private_subnets
-  availability_zones   = each.value.availability_zones
+  availability_zone    = each.value.availability_zone
 }
 
 output "vpc" {
