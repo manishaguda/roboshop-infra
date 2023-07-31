@@ -10,6 +10,6 @@ module "vpc" {
   availability_zone    = each.value.availability_zone
 }
 
-output "out" {
-  value = module.vpc
-}
+#output "out" {
+#  value = module.vpc
+#}
