@@ -40,6 +40,22 @@ module "docdb" {
         }
 
 
+module "elasticache" {
+          source        = "github.com/manishaguda/tf-module-elasticache"
+          env           = var.env
+
+          for_each      = var.rds
+          subnet_ids    = lookup(lookup(lookup(lookup(module.vpc, each.value.vpc_name, null), "private_subnet_ids", null), each.value.subnets_name, null), "subnet_ids", null)
+
+          vpc_id        = lookup(lookup(module.vpc, each.value.vpc_name, null), "vpc_id", null)
+          allow_cidr    = lookup(lookup(lookup(lookup(var.vpc, each.value_name, null), "private_subnets", null), "app", null), "cidr_block", null
+
+            number_of_node_groups = each.value.number_of_node_groups
+            replicas_per_node_group = each.value.replicas_per_node_group
+            node_type               = each.value.node_type
+            }
+
+
 output "vpc" {
   value = module.vpc
 }
