@@ -74,7 +74,7 @@ rabbitmq = {
     vpc_name = "main"
     subnets_name = "db"
     engine_type  = "RabbitMQ"
-    engine_type  = "3.10.10"
+    engine_version  = "3.10.10"
     host_instance_type = mq.t3.micro
     deployment_mode = "SINGLE_INSTANCE"
   }
