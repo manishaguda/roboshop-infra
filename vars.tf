@@ -4,4 +4,6 @@ variable "default_vpc_id" {}
 variable "docdb" {}
 variable "rds" {}
 variable "rabbitmq" {}
-
+variable "alb" {}
+variable "apps" {}
+variable "component" {}
