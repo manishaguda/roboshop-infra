@@ -7,3 +7,4 @@ variable "rabbitmq" {}
 variable "alb" {}
 variable "apps" {}
 variable "component" {}
+variable "bastion_cidr" {}
